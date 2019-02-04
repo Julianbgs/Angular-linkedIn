@@ -1,0 +1,26 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item nav-profile">
+      <div class="nav-link">
+        <button class="btn btn-success btn-block">New Search
+          <i class="mdi mdi-plus"></i>
+        </button>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="dashboardDropdownOpen = !dashboardDropdownOpen" [attr.aria-expanded]="dashboardDropdownOpen"
+        aria-controls="dashboard-dropdown" [ngClass]="{'active': dashboardLink.isActive}">
+        <i class="menu-icon mdi mdi-television"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
+      <div class="collapse" id="dashboard-dropdown" [ngbCollapse]="!dashboardDropdownOpen">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard" routerLinkActive="active" #dashboardLink="routerLinkActive">Dashboard
+              1</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
