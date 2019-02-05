@@ -16,6 +16,7 @@ import { NgxGaugeModule } from 'ngx-gauge';
 
 
 import { AppComponent } from './app.component';
+import { DataTablesModule } from 'angular-datatables';
 
 
 
@@ -52,6 +53,7 @@ import { Page500Component } from './sample-pages/page500/page500.component';
     RouterModule,
     HttpClientModule,
     HttpModule,
+    DataTablesModule,
     AppRoutingModule,
     FormsModule,
     ChartsModule,
