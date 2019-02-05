@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule} from "@angular/http";
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -28,7 +29,6 @@ import { SidebarComponent } from './partials/sidebar/sidebar.component';
 import { DashboardComponent } from './screens/dashboard/dashboard.component';
 
 
-
 import { LoginComponent } from './sample-pages/login/login.component';
 import { RegisterComponent } from './sample-pages/register/register.component';
 import { Page404Component } from './sample-pages/page404/page404.component';
@@ -45,11 +45,13 @@ import { Page500Component } from './sample-pages/page500/page500.component';
     LoginComponent,
     RegisterComponent,
     Page404Component,
-    Page500Component
+    Page500Component,
   ],
   imports: [
     BrowserModule,
     RouterModule,
+    HttpClientModule,
+    HttpModule,
     AppRoutingModule,
     FormsModule,
     ChartsModule,
