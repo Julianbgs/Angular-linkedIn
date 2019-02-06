@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpModule} from "@angular/http";
+import { HttpModule} from '@angular/http';
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -12,6 +12,8 @@ import { ChartsModule } from 'ng2-charts';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { DragulaModule } from 'ng2-dragula';
 import { NgxGaugeModule } from 'ngx-gauge';
+
+
 
 
 

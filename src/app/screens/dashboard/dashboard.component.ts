@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -11,14 +12,22 @@ export class DashboardComponent implements  OnInit {
 
     ngOnInit(): void {
         this.dtOptions = {
-            ajax: 'http://jsonplaceholder.typicode.com/posts',
+            ajax: {url: 'https://amazonbot.dimatech.org/api/v1/marketplace/', dataSrc:'' },
             columns: [{
-                title: 'ID',
-                data: 'id'
+                title: 'url',
+                data: 'url'
             }, {
-                title: 'UserId',
-                data: 'userId'
-            }]
+                title: 'market',
+                data: 'marketPlaceName'
+            }, {
+                title: 'actions',
+                render: function (data, type, full, meta){
+                    return '<td class="text-right">' +
+                        '<button class="btn btn-primary" (click)="alert()">View</button>' +
+                        '<button class="btn btn-primary" (click)="alert()">Delete</button>';
+                }
+            }
+               ]
         };
     }
 }
